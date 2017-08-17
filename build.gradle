@@ -1,0 +1,36 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'de.richsource.gradle.plugins:gwt-gradle-plugin:0.6'
+    }
+}
+
+apply plugin: 'gwt'
+apply plugin: 'war'
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    jcenter()
+}
+
+repositories { mavenCentral() }
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+    testCompile('junit:junit:4.11')
+
+}
+
+gwt {
+    gwtVersion='2.8.0'
+
+    modules 'com.gsap.gsap'
+
+    maxHeapSize = "1024M"
+    
+    superDev {
+        noPrecompile=true
+    }
+}
