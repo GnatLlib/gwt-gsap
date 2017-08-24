@@ -4,8 +4,6 @@ package com.gsap.core;
 import com.gsap.js.Function;
 import com.gsap.js.JsArray;
 import com.gsap.js.JsObject;
-import com.gsap.js.Function;
-import com.gsap.js.JsArray;
 import jsinterop.annotations.*;
 
 /**

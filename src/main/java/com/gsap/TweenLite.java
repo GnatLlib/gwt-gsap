@@ -5,8 +5,6 @@ import com.gsap.easing.Ease;
 import com.gsap.js.Function;
 import com.gsap.js.JsArray;
 import com.gsap.js.JsObject;
-import com.gsap.js.Function;
-import com.gsap.js.JsArray;
 import jsinterop.annotations.*;
 
 /**

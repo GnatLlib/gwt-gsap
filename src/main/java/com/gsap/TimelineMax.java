@@ -3,8 +3,6 @@ package com.gsap;
 import com.gsap.js.Function;
 import com.gsap.js.JsArray;
 import com.gsap.js.JsObject;
-import com.gsap.js.Function;
-import com.gsap.js.JsArray;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
