@@ -8,7 +8,7 @@ buildscript {
 }
 
 apply plugin: 'gwt'
-apply plugin: 'war'
+apply plugin: 'java'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -23,10 +23,29 @@ dependencies {
 
 }
 
+task generateJar{
+    dependsOn 'clean'
+    dependsOn 'classes'
+    dependsOn 'jar'
+    tasks.findByName('classes').mustRunAfter 'clean'
+    tasks.findByName('jar').mustRunAfter 'classes'
+
+    description 'Generates wrapper jar'
+
+
+
+jar{
+    manifest {
+        attributes(
+                "Name" : "gwt-gsap",
+                "Specification-Version": 1.0)
+    }
+}
+}
 gwt {
     gwtVersion='2.8.0'
 
-    modules 'com.gsap.gsap'
+    modules 'com.apptio.gsap'
 
     maxHeapSize = "1024M"
     
